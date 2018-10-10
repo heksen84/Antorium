@@ -1,5 +1,3 @@
-Пособие для начинающего
-
 ---------------------------------------------------
  Как поднять проект с нуля на Laravel с VueJS
 ---------------------------------------------------
@@ -41,20 +39,10 @@ RewriteRule ^(css|js|images)/(.*)$ public/$1/$2 [L,NC]
 ------------------------------------------------------------------------------------
 <?php
 
-/**
- * Laravel - A PHP Framework For Web Artisans
- *
- * @package  Laravel
- * @author   Taylor Otwell <taylor@laravel.com>
- */
-
 $uri = urldecode(
     parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)
 );
 
-// This file allows us to emulate Apache's "mod_rewrite" functionality from the
-// built-in PHP web server. This provides a convenient way to test a Laravel
-// application without having installed a "real" web server software here.
 if ($uri !== '/' && file_exists(__DIR__.'/public'.$uri)) {
     return false;
 }
@@ -67,7 +55,7 @@ require_once __DIR__.'/public/index.php';
 20. Переименуем в корне конфиг проекта файл .env.example в .env
 21. Сгенерируем ключ шифрования php artisan key:generate Теперь наш ключ сгенерился и записался в .env в APP_KEY
 22. Запускаем проект. Готово!
-23. Для работы с базой мы будем использовать phpmyadmin и MariaDB.
+23. Для работы с базой мы будем использовать phpmyadmin и MariaDB. MariaDB настраивается в модулях OpenServer'а.
 24. Откройте phpmyadmin и создайте новую базу
 25. В корне проекта откройте файл .env и в ключ DB_DATABASE пропишите имя вашей базы. DB_USERNAME=root и DB_PASSWORD=
 26. Laravel по умолчанию поддерживает авторизацию для этого наберите php artisan migrate (должна сгенерится таблица users из классов database/migrations) 
@@ -76,8 +64,13 @@ require_once __DIR__.'/public/index.php';
 28. Проверьте доступность nodejs из коммандной строки набрав node --help
 29. По умолчанию Laravel для фронтенда использует компонентный фреймворк VueJS вместо устаревшего JQuery. JQuery вещь прекрасная, но делать на нём обработку сложных интерфейсов довольно проблематично. 
     Используйте его как вспомогательный инструмент.
-30. Установите необходимые модули nodejs  коммандой npm i
+30. Установите необходимые модули nodejs коммандой npm i
 31. После установки в папке проекта должна появиться папка node_modules
 32. Установите Vue коммандой npm i vue
 33. Установите VueX хранилище коммандой npm i vuex
 33. Установите Axios  коммандой npm i axios
+34. Для автосборки модулей создайте файл $watch.cmd с содержимым: npm run watch-poll
+35. Перед разработкой всегда запускайте этот файл т.к. он даёт возможность отслеживать js код на лету.
+36. Установите Visual Studio Code. На мой взгляд сейчас это лучший универсальный редактор кода. Ссылка: https://code.visualstudio.com/download
+37. Для обновления проекта пропишите настройки своего проекта во вкладке source control Visual Studio Code.
+38. Для удобства отладки можно установить панель отладки laravel-debugbar https://github.com/barryvdh/laravel-debugbar
