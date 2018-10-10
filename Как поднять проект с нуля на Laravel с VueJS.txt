@@ -74,3 +74,4 @@ require_once __DIR__.'/public/index.php';
 36. Установите Visual Studio Code. На мой взгляд сейчас это лучший универсальный редактор кода. Ссылка: https://code.visualstudio.com/download
 37. Для обновления проекта пропишите настройки своего проекта во вкладке source control Visual Studio Code.
 38. Для удобства отладки можно установить панель отладки laravel-debugbar. Описание установки здесь: https://github.com/barryvdh/laravel-debugbar
+39. Незабываем, что файлы проекта должны быть в кодировке UTF-8. Иначе сиволы на русском будут в виде абракадабры.
