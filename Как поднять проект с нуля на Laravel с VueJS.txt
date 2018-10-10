@@ -73,4 +73,4 @@ require_once __DIR__.'/public/index.php';
 35. Перед разработкой всегда запускайте этот файл т.к. он даёт возможность отслеживать js код на лету.
 36. Установите Visual Studio Code. На мой взгляд сейчас это лучший универсальный редактор кода. Ссылка: https://code.visualstudio.com/download
 37. Для обновления проекта пропишите настройки своего проекта во вкладке source control Visual Studio Code.
-38. Для удобства отладки можно установить панель отладки laravel-debugbar https://github.com/barryvdh/laravel-debugbar
+38. Для удобства отладки можно установить панель отладки laravel-debugbar. Описание установки здесь: https://github.com/barryvdh/laravel-debugbar
